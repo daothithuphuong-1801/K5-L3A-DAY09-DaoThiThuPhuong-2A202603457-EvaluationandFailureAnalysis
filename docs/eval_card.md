@@ -2,8 +2,8 @@
 
 Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10. Mọi con số dưới đây lấy từ report do `python -m lab9.eval` sinh ra (dẫn run ID), không gõ tay.
 
-- **Run ID / eval set SHA:** baseline `E-swarm-20261117-ca4e` · PR đối chứng `E-fixed-20261117-ca4e`, `E-seeded_regression-20261117-ca4e` · eval set `ca4ec167e6d6`
-- **Phiên bản:** code (commit) `961921e` (nhánh `starter/d09`) · eval set v1 (sha `ca4ec167e6d6`) · metric_spec `1.0` · grader (commit) `4014b37` (`lab9/graders.py`) · seeds 11/22/33/44/55 · MockLLM · Python 3.11.4
+- **Run ID / eval set SHA:** baseline `E-swarm-20261117-33f8` · PR đối chứng `E-fixed-20261117-33f8`, `E-seeded_regression-20261117-33f8` · eval set `33f8019912b3`
+- **Phiên bản:** code: commit cuối của PR #1 (nhánh `starter/d09`) · eval set v1 (sha `33f8019912b3`) · metric_spec `1.0` · grader (commit) `138af05` (`lab9/graders.py`) · seeds 11/22/33/44/55 · MockLLM · Python 3.11.4
 - **Eval set:** v1, 14 item × 5 seed = 70 trial, nguồn `lab8_public` (ma trận T01–T14); nhãn tách riêng ở `data/eval/labels_v1.json`; mỗi item có `failure_modes` từ `docs/failure_taxonomy.md` (FM-01…FM-09), `evalset --check` = 0 problem.
 
 ## Metric & ngưỡng (trích `config/metric_spec.yaml`)
@@ -68,7 +68,7 @@ Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10. Mọi co
 
 # Mục v2 (Advanced / Expert: M5–M7)
 
-- **Run ID / eval set SHA:** baseline v2 `E-swarm-20261117-1106` · eval set v2 `110610a08095` (28 item = 14 v1 + 14 adversarial) · metric_spec `2.0` · seeds 11/22/33/44/55
+- **Run ID / eval set SHA:** baseline v2 `E-swarm-20261117-285d` · eval set v2 `285d4afe7980` (28 item = 14 v1 + 14 adversarial) · metric_spec `2.0` · seeds 11/22/33/44/55
 - **Eval set v2:** `evalset --v2 --build` sạch (0 problem); `config/fm_map.yaml` ánh xạ 8 cơ chế tấn công sang FM-02…FM-09, mỗi FM bị tấn công ≥ 3 item (bảng ở `docs/failure_taxonomy.md`). Slice tag lấy từ **nhãn** (`money_movement` = nhãn hoàn > 0, `denial`, `escalation`, `adversarial` = item của pack), không lấy từ output của agent.
 
 ## Ngưỡng chọn từ A/A
